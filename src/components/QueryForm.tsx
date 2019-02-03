@@ -46,6 +46,7 @@ export class QueryForm extends React.Component<IQueryFormProps, {}> {
   public onSubmit(event: any): void {
     event.preventDefault();
     this.props.onQueryExecute();
+    event.stopPropagation();
   }
 
   public render(): JSX.Element {
